@@ -1,0 +1,58 @@
+conversation
+{
+	actor = "Actor1";
+	page //ID={{PAGE_START}} Index=<%= PAGE_START %>
+	{
+		name = "Actor1";
+		dialog = "Hello.";
+		choice
+		{
+			text = "Never mind.";
+			closedialog = true;
+		}
+		choice
+		{
+			text = "Hey, could you help me with something?";
+			nextpage = <%= PAGE_WHERE_GET %>; // PAGE_WHERE_GET 
+			nomessage = "With what? Come back when you've found something I can help with.";
+			cost
+			{
+					item = "Item1";
+					amount = 1;
+			}
+		}
+	}
+	page //ID={{PAGE_WHERE_GET}} Index=<%= PAGE_WHERE_GET %>
+	{
+		name = "Actor1";
+		dialog = "Hey, where did you get that? Give it back!";
+		choice
+		{
+			text = "I'm looking for the blue key to the hangar! I'll give this to you if you give me the key!";
+			nextpage = <%= PAGE_OK %>; // PAGE_OK 
+		}
+	}
+	page //ID={{PAGE_OK}} Index=<%= PAGE_OK %>
+	{
+		name = "Actor1";
+		dialog = Fine!";
+		choice
+		{
+			text = "I'll give you your other thing back.";
+			giveitem = "BlueCard";
+			nextpage = <%= PAGE_GIVEKEY %>; // PAGE_GIVEKEY 
+		}
+	}
+	page //ID={{PAGE_GIVEKEY}} Index=<%= PAGE_GIVEKEY %>
+	{
+		name = "Actor1";
+		dialog = "Okay, here's the key.";
+		choice
+		{
+			text = "Thanks!";
+			yesmessage = "Alright, don't tell anyone else about this.";
+			closedialog = true;
+		}
+	}
+}
+

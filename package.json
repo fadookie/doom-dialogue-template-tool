@@ -1,14 +1,15 @@
 {
-  "name": "usdf-template-tool",
-  "version": "0.0.1",
-  "description": "Tool for creating USDF dialogue for Strife/Doom from a template using labels rather than hardcoded page indices",
+  "name": "doom-dialogue-template-tool",
+  "version": "1.0.0",
+  "description": "Tool for creating Strife/USDF/ZSDF dialogue for Strife/Doom from a template using labels rather than hardcoded page indices",
   "main": "template-tool.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "template-tool": "node template-tool.js"
   },
   "author": "Eliot Lash",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "yargs": "^17.7.2"
   }
 }

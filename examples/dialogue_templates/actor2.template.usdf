@@ -1,0 +1,15 @@
+conversation
+{
+	actor = "Actor2";
+	page //ID={{PAGE_START}} Index=<%= PAGE_START %>
+	{
+		name = "Actor2";
+		dialog = "Hello.";
+		choice
+		{
+			text = "Never mind.";
+			closedialog = true;
+		}
+	}
+}
+

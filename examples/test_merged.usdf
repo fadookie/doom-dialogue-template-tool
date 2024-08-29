@@ -1,0 +1,84 @@
+namespace = "ZDoom";
+
+// This is an example of a custom header template. You can change the namespace used by editing it above.
+
+// This is a build artifact from template-tool.js v1.0.0. DO NOT EDIT DIRECTLY!
+// Edit the source templates in examples/dialogue_templates/ and then run template-tool to update!
+
+
+
+conversation
+{
+	actor = "Actor1";
+	page //ID={{PAGE_START}} Index=1
+	{
+		name = "Actor1";
+		dialog = "Hello.";
+		choice
+		{
+			text = "Never mind.";
+			closedialog = true;
+		}
+		choice
+		{
+			text = "Hey, could you help me with something?";
+			nextpage = 2; // PAGE_WHERE_GET 
+			nomessage = "With what? Come back when you've found something I can help with.";
+			cost
+			{
+					item = "Item1";
+					amount = 1;
+			}
+		}
+	}
+	page //ID={{PAGE_WHERE_GET}} Index=2
+	{
+		name = "Actor1";
+		dialog = "Hey, where did you get that? Give it back!";
+		choice
+		{
+			text = "I'm looking for the blue key to the hangar! I'll give this to you if you give me the key!";
+			nextpage = 3; // PAGE_OK 
+		}
+	}
+	page //ID={{PAGE_OK}} Index=3
+	{
+		name = "Actor1";
+		dialog = Fine!";
+		choice
+		{
+			text = "I'll give you your other thing back.";
+			giveitem = "BlueCard";
+			nextpage = 4; // PAGE_GIVEKEY 
+		}
+	}
+	page //ID={{PAGE_GIVEKEY}} Index=4
+	{
+		name = "Actor1";
+		dialog = "Okay, here's the key.";
+		choice
+		{
+			text = "Thanks!";
+			yesmessage = "Alright, don't tell anyone else about this.";
+			closedialog = true;
+		}
+	}
+}
+
+
+
+conversation
+{
+	actor = "Actor2";
+	page //ID={{PAGE_START}} Index=1
+	{
+		name = "Actor2";
+		dialog = "Hello.";
+		choice
+		{
+			text = "Never mind.";
+			closedialog = true;
+		}
+	}
+}
+

@@ -1,0 +1,3 @@
+namespace = "ZDoom";
+
+// This is an example of a custom header template. You can change the namespace used by editing it above.
