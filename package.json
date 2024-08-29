@@ -1,0 +1,14 @@
+{
+  "name": "usdf-template-tool",
+  "version": "0.0.1",
+  "description": "Tool for creating USDF dialogue for Strife/Doom from a template using labels rather than hardcoded page indices",
+  "main": "template-tool.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eliot Lash",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
