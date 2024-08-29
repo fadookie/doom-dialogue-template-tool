@@ -60,7 +60,7 @@ Page labels are expected to begin with `PAGE_` and then contain some unique sequ
 This token should be put next to the `page` block it corresponds to as the order the tokens are declared in determines their page index in the merged output file. So if the page labels get out of order somehow or a page is missing a label, the label substitution tokens will link to the wrong pages. This will also help keep track of what goes where and to make the merged dialogue file more self-documenting.
 
 ## Page Label Substitution Tokens
-You can have zero or more page label substitution token for each declared page label. These tokens should be placed anywhere you would normally put a page index in the dialogue file, such as the `nexpage` property of a `choice` block, or a `link` property of a `page`. Substitution tokens take the form `<%= PAGE_LABEL %>`, so for example if you wanted to insert the page index of `PAGE_START` declared above you would write `<%= PAGE_START %>`.
+You can have zero or more page label substitution token for each declared page label. These tokens should be placed anywhere you would normally put a page index in the dialogue file, such as the `nextpage` property of a `choice` block, or a `link` property of a `page`. Substitution tokens take the form `<%= PAGE_LABEL %>`, so for example if you wanted to insert the page index of `PAGE_START` declared above you would write `<%= PAGE_START %>`.
 
 Here's an example of a substitution token in context:
 ```
